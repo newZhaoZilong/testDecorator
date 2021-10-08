@@ -9,19 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-//类装饰器实例
-var Singleton_1 = require("./Singleton");
-var Dog = /** @class */ (function () {
-    function Dog(name) {
+require("reflect-metadata");
+var Post = /** @class */ (function () {
+    function Post(name) {
         this.name = name;
     }
-    Dog = __decorate([
-        Singleton_1.Singleton,
-        __metadata("design:paramtypes", [String])
-    ], Dog);
-    return Dog;
+    __decorate([
+        Prop,
+        __metadata("design:type", String)
+    ], Post.prototype, "name", void 0);
+    return Post;
 }());
-var dog1 = new Dog('yaofan');
-var dog2 = new Dog('yaoxian');
-console.log(dog1);
-console.log(dog2);
+function Prop(target, propertyKey) {
+    var type = Reflect.getMetadata('design:type', target, propertyKey);
+    console.log(type);
+}

@@ -8,20 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-//类装饰器实例
-var Singleton_1 = require("./Singleton");
-var Dog = /** @class */ (function () {
-    function Dog(name) {
-        this.name = name;
+//属性装饰器
+var Greeter = /** @class */ (function () {
+    function Greeter(message) {
+        this.greeting = message;
     }
-    Dog = __decorate([
-        Singleton_1.Singleton,
-        __metadata("design:paramtypes", [String])
-    ], Dog);
-    return Dog;
+    Greeter.prototype.greet = function () {
+    };
+    __decorate([
+        observe,
+        __metadata("design:type", String)
+    ], Greeter.prototype, "greeting", void 0);
+    return Greeter;
 }());
-var dog1 = new Dog('yaofan');
-var dog2 = new Dog('yaoxian');
-console.log(dog1);
-console.log(dog2);
+function observe(target, propertyKey) {
+    console.log('haha');
+}

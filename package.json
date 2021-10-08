@@ -1,24 +1,23 @@
 {
-  "name": "testDecorator",
+  "name": "testdecorator",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/newZhaoZilong/testDecorator.git"
+    "url": "git+https://github.com/newZhaoZilong/testDecorator.git"
   },
-  "author": "赵青山 <newzhaozilong@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "typescript": "^4.4.3"
-  },
-  "description": "研究装饰器原理",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/newZhaoZilong/testDecorator/issues"
   },
   "homepage": "https://github.com/newZhaoZilong/testDecorator#readme",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": []
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  }
 }
